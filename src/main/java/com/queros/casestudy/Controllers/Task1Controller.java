@@ -28,10 +28,12 @@ public class Task1Controller {
   )
     @PostMapping("/getCharacterIndex")
     public LinkedList<String> PostCharacterIndex(@Parameter @RequestParam("input") String inputText){
+        //parse the string into a char array.
         char[] chars = inputText.toCharArray();
-
+        //use Linked List to retain order.
         LinkedList<String> characterPositionResponseList = new LinkedList<>();
 
+        //cycle through each char and assign count to each char.
         for(int count = 0; count<chars.length; count++){
             CharacterPositionResponse characterPositionResponse = new CharacterPositionResponse(String.valueOf(chars[count]),count+1);
             characterPositionResponseList.add(characterPositionResponse.toString());
