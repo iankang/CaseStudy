@@ -1,0 +1,8 @@
+#serve the site on port 8085
+server:
+  port: 8085
+#swagger-ui documentation exposed at this path.
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
